@@ -1,0 +1,30 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<!-- define angular app -->
+<html ng-app="lamp">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+    <script src="front.js"></script>
+    <link rel="stylesheet" href="table.css">
+</head>
+
+<body ng-controller="serviceController">
+    <header>
+            <h3>TURN ON LAMP</h3>
+    </header>
+    <div style="">
+        <button ng-click="clickSwitchLamp()" class="nblue" style="float:left">Turn on lamp</button>
+    </div>
+    <div style="clear: both">
+        <button class="ngreen" style="float:left;">{{lamp}}</button>
+    </div>
+</body>
+<footer>
+    <div style='float:right'>
+        powered by pbaranski v0.101/12/2017
+    </div>
+
+</footer>
+
+</html>
