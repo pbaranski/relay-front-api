@@ -5,26 +5,26 @@
 
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+    <script type="text/javascript" src="angular-desktop-notification/dist/angular-desktop-notification.js"></script>
     <script src="front.js"></script>
     <link rel="stylesheet" href="table.css">
 </head>
 
-<body ng-controller="serviceController">
-    <header>
-            <h3>CLICK LAMP</h3>
-    </header>
-    <div style="">
-        <button ng-click="clickSwitchLamp()" class="nblue" style="float:left">Turn on lamp</button>
-    </div>
-    <div style="clear: both">
-        <button class="ngreen" style="float:left;">{{lamp}}</button>
+<body ng-controller="serviceController"  ng-class="{'back':lampSwitch, 'back2':!lampSwitch}">
+
+    <span>
+        <label class="switch">
+            <input type="checkbox" class="checkbox" ng-model="lampSwitch" data-ng-click='clickSwitchLamp()'/>
+            <div class=""></div>
+        </label>
+    </span>
+
+
+    <div class="footer">
+        <div style='float:right'>
+            powered by pbaranski v1.0 10/02/2018
+        </div>
     </div>
 </body>
-<footer>
-    <div style='float:right'>
-        powered by pbaranski v0.101/12/2017
-    </div>
-
-</footer>
 
 </html>

@@ -18,22 +18,37 @@ var parseBody= function(body){
     }
     console.log('Server says -> look what I received\n' + JSON.stringify(obj));
     return obj
-}
+};
 
 
 app.get('/', function (req, res) {
    res.sendFile(path.join(__dirname + '/index.html'));
 });
 app.get('/api/lamp', function (req, res) {
-    res.sendFile(path.join(__dirname + '/public/lamp.json'));
+    var filePath = path.join(__dirname + '/public/lamp.json');
+    var file = fs.readFileSync(filePath, 'utf8');
+    var state = parseBody(file);
+    console.log("Retrieved json:"+ state);
+    res.send(JSON.stringify(state['state']));
+    res.end();
 });
 app.get('/lamp', function (req, res) {
     res.sendFile(path.join(__dirname + '/public/lamp.html'));
 });
 
-app.listen(80, function () {
-    console.log('Example app listening on port 3000!');
+app.get('/api/lampOld', function (req, res) {
+    var filePath = path.join(__dirname + '/public/lamp.json');
+    var file = fs.readFileSync(filePath, 'utf8');
+    var state = parseBody(file);
+    if (state.state) {
+        res.send(JSON.stringify(1));
+    } else {
+        res.send(JSON.stringify(0));
+    }
+    console.log("Retrieved json:"+ state);
+    res.end();
 });
+
 
 app.get('/lampState', function(request, response){
     var filePath = path.join(__dirname + '/public/lamp.json');
@@ -47,11 +62,11 @@ app.get('/lampOn', function(request, response){
 	console.log('Saving to file');
 	console.log(request.body);
 	var writer = fs.createWriteStream(filePath);
-	writer.write(JSON.stringify({"state":1}), { flag: 'wx' }, function (err) {
+	writer.write(JSON.stringify({"state":true}), { flag: 'wx' }, function (err) {
 		if (err) throw err;
 		console.log("It's saved!");
 	});	 
-	response.send({"state":1});
+	response.send({"state":true});
 	response.end();
 });
 
@@ -60,11 +75,15 @@ app.get('/lampOff', function(request, response){
     console.log('Saving to file');
     console.log(request.body);
     var writer = fs.createWriteStream(filePath);
-    writer.write(JSON.stringify({"state":0}), { flag: 'wx' }, function (err) {
+    writer.write(JSON.stringify({"state":false}), { flag: 'wx' }, function (err) {
         if (err) throw err;
         console.log("It's saved!");
     });
-    response.send({"state":0});
+    response.send({"state":false});
     response.end();
+});
+
+app.listen(443, function () {
+    console.log('Example app listening on port 443!');
 });
 

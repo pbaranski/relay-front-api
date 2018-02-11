@@ -1,0 +1,101 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "angular-desktop-notification",
+        "scope": null,
+        "escapedName": "angular-desktop-notification",
+        "name": "angular-desktop-notification",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\0\\Projects\\relay"
+    ]
+  ],
+  "_from": "angular-desktop-notification@latest",
+  "_id": "angular-desktop-notification@1.1.6",
+  "_inCache": true,
+  "_location": "/angular-desktop-notification",
+  "_nodeVersion": "6.9.3",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/angular-desktop-notification-1.1.6.tgz_1507871779298_0.6110721165314317"
+  },
+  "_npmUser": {
+    "name": "jmsanpascual",
+    "email": "jm.sanpascual@gmail.com"
+  },
+  "_npmVersion": "5.4.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "angular-desktop-notification",
+    "scope": null,
+    "escapedName": "angular-desktop-notification",
+    "name": "angular-desktop-notification",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular-desktop-notification/-/angular-desktop-notification-1.1.6.tgz",
+  "_shasum": "a3ec30c7c4d40b7b23a54d3ca5bcdd63e56ce401",
+  "_shrinkwrap": null,
+  "_spec": "angular-desktop-notification",
+  "_where": "C:\\Users\\0\\Projects\\relay",
+  "author": {
+    "name": "Julius Marvin S. San Pascual",
+    "email": "jm.sanpascual@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/jmsanpascual/angular-desktop-notification/issues"
+  },
+  "dependencies": {},
+  "description": "A simple HTML5 notification for Angular 1",
+  "devDependencies": {
+    "angular": "^1.6.6",
+    "angular-mocks": "^1.6.6",
+    "grunt": "^1.0.1",
+    "grunt-browserify": "^5.2.0",
+    "grunt-contrib-uglify": "^3.1.0",
+    "jasmine-core": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-spec-reporter": "0.0.31"
+  },
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-MhRDj4nbyrNywFoMXUsoW11RrneSq9m2Lu9eJ+A6+I+rU82Ashk8WijZc+sOsUvCMC/9HmgXzWGun+z5yaL2qg==",
+    "shasum": "a3ec30c7c4d40b7b23a54d3ca5bcdd63e56ce401",
+    "tarball": "https://registry.npmjs.org/angular-desktop-notification/-/angular-desktop-notification-1.1.6.tgz"
+  },
+  "gitHead": "a98f56115d2ad6ed8a40018e39b6ad209a6b8486",
+  "homepage": "https://github.com/jmsanpascual/angular-desktop-notification#readme",
+  "keywords": [
+    "angular",
+    "html5",
+    "notification"
+  ],
+  "license": "MIT",
+  "main": "dist/angular-desktop-notification.js",
+  "maintainers": [
+    {
+      "name": "jmsanpascual",
+      "email": "jm.sanpascual@gmail.com"
+    }
+  ],
+  "name": "angular-desktop-notification",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmsanpascual/angular-desktop-notification.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.1.6"
+}
